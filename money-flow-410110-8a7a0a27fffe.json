@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "money-flow-410110",
+  "private_key_id": "8a7a0a27fffe739b3297295076e81e38112ca26c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDoajnR6GCkV0TR\nqO0MMvlm1+4l4MjP6UmGJ0piE8oI2CzYrm4LfyFVe6OsE4mMvUtxPskfYhkFL9h5\nE/hCGLi1GSFJs6tmAcre+gmav/DnLAmn5hwWv7Tg+BPMq9dZPR3IQtOHsowUx7DJ\ndD5V+VgJmtGC4PRovJtVGUabEA+d14NrehUJnW2KvZe0qJBeVFEzd/G+FAGNqxdH\nOOogbzx1aShsVhozDxfYOIGuU8BFf4EKP7A/Q3h49Ig9huxboga34pdaIPmi+aBR\n8WqXfOsaiBtqttvkaqR2EoK27Y19g+vQ4kz9lei1zku9ALeNM6ZgVCxq/7uf2KHZ\npEdYoPGRAgMBAAECggEAFmMHb1otJB29C14nrMykksAkeHHDnHWrd0IfaDB6ysmA\nrF1E5iBlRnwl1fEXbaVc+BGk3G9RDkHyqo4xx0zlTpn9YSfuz+ETuJ2odJQ3fegs\n6yDMCz7rcXeqRJIEdY9gm1K6JTCEGlfpbF/UX08PKI58NT/UGw1lZiS/1QQOu240\nNbq5bek/mwEdvTmFW+aq23FH5tBftm6zDiR7KxwQvYD6XDIdUKdIEYtaHJ2syzfS\nrvKtkhireUmWteFCttBrvwavZElJkD0tM0+lPxs6FJOYPypDQs64rAKB3WZoNL/7\nOOiVug4T3qvkeqi11em9m/Uc5zmw8fles/TNwYQtnwKBgQD4t9I0P0+GFDi8T21I\ny79DP0OxsugH3bNL7x96V09g0UyW+2r8tZpSt7KvDB6jGStTIUPOekyGEETx4j36\nVvcCoiUqiIyZ2tZcfyGQWDQ3g6jos9OS6xuS2Rf+i6o7e0XiDARQp2+bFfBmoP5X\nVHl2yjvPuel9Ipm+V1pgW+X4ewKBgQDvODXln2yeUrvl57ibEyFzhuyGqs1eJkTo\nG1dUFpRirzK2LNrhnmCZFdLwwwo0Set3iRn//68ZnhJUkHvYCnhC3xn0W0yLWuf6\niUqNSplyjdiCi4H6BrI43g4awDABLxlFDM/ttAzhInhEQ+0bH0G99/P/6JmwtnQS\nMVP7urduYwKBgEe2OJV366XtDq689/WVSYBKLWp++wfJlHjAaYMMyYZQ0pR1yVMz\nyVswPATcqbi8+RDu9m4CNS4yYq6bXONhT7ciqTSqSl/SCRyCS1sjE2suOvVdZBNo\nVnrwvUpXWq3rzSpv7I6UuEku+jGdGbh0UtE9XiF2qSu7XjjTVuuRk60hAoGAVas9\nsgQL9A8Q916qv+5z9lmFbxzP+z2dQ7o25ghID6dKc+9QW6hKU8h7CHnwt5UZXG+e\n/gzk+jmfuuUbVN07AEfBlb70hJuDpDdymXLzzRB7TxUC8TVgsfjj+DSHfIUPeakC\n9c+bJS0hAOGKkkH5WzznBuiX0a8lljZQK0BM3J0CgYBFuqf69do3/nxCrY4iu2Mm\nEkwljeo7WZVRwf0JvWn4SCPhaVeXE7IppaqrSKUsud0X47O0Ce5aGdI5OUSoQ1V9\nqe/W+1U17dZp+mDCd3HC9EbgQK/DVh9P/ZzT+KvCs0chBklocC5iNSPXphrkIwDL\n5G0Zp2qyfyKFanCSayEC+w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "editor@money-flow-410110.iam.gserviceaccount.com",
+  "client_id": "100729520431908953416",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/editor%40money-flow-410110.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
