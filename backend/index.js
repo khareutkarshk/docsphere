@@ -51,35 +51,7 @@ const upload = multer({
   },
 });
 
-// function uploadFile(req,res,path,name,file, next) {
-//     upload.single('file')(req, res, err => {
-//       if (err) {
-//         return next(err);
-//       }
-//       if (!file) {
-//         const error = new Error('No file uploaded');
-//         error.statusCode = 400;
-//         return next(error);
-//       }
 
-//       const blob = bucket.file(`${path}/${name}`);
-
-//       const blobStream = blob.createWriteStream({
-//         resumable: false,
-//         contentType: file.mimetype,
-//       });
-
-//       blobStream.on('error', err => next(err));
-
-//       blobStream.on('finish', () => {
-//         const publicUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`;
-//         res.locals.publicUrl = publicUrl;
-//         next();
-//       });
-
-//       blobStream.end(file.buffer);
-//     });
-//   }
 function uploadFile(folder, filename, file) {
   try {
     const fileUpload = bucket.file(`${folder}/${filename}`);
@@ -113,49 +85,54 @@ const mysqlPool = mysql.createPool({
 app.use(express.static(path.join(__dirname, "build")));
 
 app.post("/api/login", async (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
-  const auth = getAuth(authApp);
-  console.log(email, password);
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCreds) => {
-      console.log("Got creds", userCreds);
-      mysqlPool.getConnection((err, con) => {
-        if (err) {
-          console.log("DBError ", err);
-          res.statusCode = 500;
-          res.json({ message: "Internal Server Error" });
-          return;
-        }
-        con.query(
-          `select * from user where id='${userCreds.user.uid}' limit 1`,
-          (error, result, field) => {
-            if (error) {
-              console.log("Query error ", error);
-              res.statusCode = 500;
-              res.json({ message: "Internal Server Error" });
-            }
-            console.log("result", result);
-            if (result[0]) {
-              req.session.user = result[0];
-              res.json(result[0]);
-            } else {
-              console.log("creds", userCreds.user.email);
-              req.session.user = userCreds.user;
-              res.json(userCreds.user);
-            }
+  try {
+    const email = req.body.email;
+    const password = req.body.password;
+    const auth = getAuth(authApp);
+    console.log(email, password);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCreds) => {
+        console.log("Got creds", userCreds);
+        mysqlPool.getConnection((err, con) => {
+          if (err) {
+            console.log("DBError ", err);
+            res.statusCode = 500;
+            res.json({ message: "Internal Server Error" });
+            return;
           }
-        );
-        con.release();
+          con.query(
+            `select * from user where id='${userCreds.user.uid}' limit 1`,
+            (error, result, field) => {
+              if (error) {
+                console.log("Query error ", error);
+                res.statusCode = 500;
+                res.json({ message: "Internal Server Error" });
+              }
+              console.log("result", result);
+              if (result[0]) {
+                req.session.user = result[0];
+                res.json(result[0]);
+              } else {
+                console.log("creds", userCreds.user.email);
+                req.session.user = userCreds.user;
+                res.json(userCreds.user);
+              }
+            }
+          );
+          con.release();
+        });
+      })
+      .catch((err) => {
+        if (err) {
+          console.log("Err3", err);
+          res.statusCode = 500;
+          res.json({ message: err });
+        }
       });
-    })
-    .catch((err) => {
-      if (err) {
-        console.log("Err3", err);
-        res.statusCode = 500;
-        res.json({ message: err });
-      }
-    });
+  } catch (error) {
+    console.log(error);
+    
+  }
 });
 
 app.get("/api/signout", async (req, res) => {
