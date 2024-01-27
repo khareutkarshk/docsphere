@@ -48,8 +48,15 @@ a {
   > h1 {
     font-size: 3.8rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
   }
+}
+
+h3, h2{
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0 0 0);
 }
 
 .zind {
@@ -65,6 +72,7 @@ a {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 18rem;
     border-radius: 20px;
+    filter: brightness(0.9);
   }
 }
 
@@ -79,6 +87,7 @@ a {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    filter: brightness(0.9);
   }
 }
 
@@ -93,6 +102,7 @@ a {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    filter: brightness(0.9);
   }
 }
 
@@ -107,6 +117,7 @@ a {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    filter: brightness(0.9);
   }
 }
 
