@@ -108,6 +108,15 @@ export default function Home() {
               src="/assets/img/banner2.jpg"
             />
           </div>
+          <div className="imgR">
+            <img
+              className=""
+              alt="place"
+              data-bss-parallax=""
+              data-bss-parallax-speed="0.8"
+              src="/assets/img/pexel2.jpg"
+            />
+          </div>
           <a href="#service-container" id="scroll-down-animation">
             <span class="mouse">
               <span class="move"></span>

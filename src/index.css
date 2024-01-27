@@ -108,12 +108,12 @@ h3, h2{
 
 .imgR {
   position: absolute;
-  top: 8%;
-  left: 25%;
-  animation: upAndDown 10s infinite;
+  bottom: 10%;
+  right: 27%;
+  animation: upAndDown 9s infinite;
   > :first-child {
-    width: 12rem;
-    height: 16rem;
+    width: 16rem;
+    height: 9rem;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -163,6 +163,9 @@ h3, h2{
     }
   }
   .imgD {
+    display: none;
+  }
+  .imgR{
     display: none;
   }
 }
